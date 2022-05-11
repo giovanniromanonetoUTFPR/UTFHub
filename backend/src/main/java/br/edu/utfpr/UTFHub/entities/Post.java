@@ -23,6 +23,7 @@ public class Post {
 	private Long materiaId;
 	@Column(nullable = false)
 	private Long autorId;
-
+	@Column(nullable = false)
+	private int like;
 	
 }
