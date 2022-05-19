@@ -24,5 +24,5 @@ public class Post {
 	@Column(nullable = false)
 	private Long autorId;
 
-	
+
 }
