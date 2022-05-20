@@ -24,9 +24,9 @@ const Header = () => {
       <div className="conteudo-header">
         <Link to="/home">Home</Link>
         <Link to="/materias">Matérias</Link>
-        <Link to="/sobre">Sobre</Link>
-        <Link to="/contato">Contato</Link>
-        <Link to="/pesquisar">
+        <Link to="/about">Sobre</Link>
+        <Link to="/about">Contato</Link>
+        <Link to="/materias">
           <FaSistrix size={33} />
         </Link>
         <ReactSVG
