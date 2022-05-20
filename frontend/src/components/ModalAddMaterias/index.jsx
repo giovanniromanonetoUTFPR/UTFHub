@@ -2,6 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Modal } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
@@ -11,6 +12,7 @@ const validationMat = yup.object().shape({
 
 function ModalAddMaterias(props) {
   const baseURL = "http://localhost:8080/materia";
+  const isAdmin = useSelector((state) => state.userAdmin);
 
   const {
     register,
@@ -26,14 +28,16 @@ function ModalAddMaterias(props) {
       tipo: 0,
     };
 
-    axios
-      .post(baseURL, dadosMateria)
-      .then((res) => {
-        props.onHide();
-      })
-      .catch((error) => {
-        alert("Erro: " + error.response.data);
-      });
+    if (isAdmin) {
+      axios
+        .post(baseURL, dadosMateria)
+        .then((res) => {
+          props.onHide();
+        })
+        .catch((error) => {
+          alert("Erro: " + error.response.data);
+        });
+    }
   };
 
   return (
@@ -45,7 +49,7 @@ function ModalAddMaterias(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Adicionar Matéria
+          Nova Matéria
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

@@ -49,7 +49,7 @@
 }
 
 #page-materias .main-container button {
-  width: 193px;
+  width: 15rem;
   height: 41px;
   outline: none;
   border: none;
@@ -60,8 +60,7 @@
   border-radius: 8px;
   color: #fff;
   font: 500 18px "Poppins", sans-serif;
-
-  margin-left: 65%;
+  margin-left: auto;
 }
 
 #page-materias .main-container button:hover {
