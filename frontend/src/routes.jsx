@@ -7,6 +7,7 @@ import { Login } from "./pages/Login";
 import { MateriaRoom } from "./pages/MateriaRoom";
 import { Materias } from "./pages/Materias";
 import { About } from "./pages/About";
+import { Admin } from "./pages/Admin";
 import { persistor, store } from "./store";
 
 function Routes() {
@@ -20,6 +21,7 @@ function Routes() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/materias" component={Materias} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/admin" component={Admin} />
             <Route path="/materias/:id" component={MateriaRoom} />
           </Switch>
         </BrowserRouter>
