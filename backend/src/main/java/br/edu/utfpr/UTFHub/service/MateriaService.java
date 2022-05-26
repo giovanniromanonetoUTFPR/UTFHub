@@ -12,8 +12,16 @@ import java.util.Optional;
 
 @Service
 public class MateriaService {
-	@Autowired
-	private MateriaRepository repository;
+	final MateriaRepository repository;
+
+	public MateriaService(MateriaRepository repository) {
+		this.repository = repository;
+	}
+
+	//@Transactional(readOnly = true)
+	public Page<Materia> findMateriaByNome(String nome, Pageable pageable) {
+		return repository.findByNomeContaining(nome, pageable);
+	}
 
 	@Transactional(readOnly = true)
 	public Page<Materia> findAll(Pageable pageable) {
