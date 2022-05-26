@@ -8,6 +8,7 @@ import { ReactSVG } from "react-svg";
 import User from "../assets/images/user.svg";
 import Header from "../components/Header";
 import HeaderContainer from "../components/HeaderContainer";
+import ModalDeletePost from "../components/ModalDeletePost";
 import ModalEditarPost from "../components/ModalEditarPost";
 import "../styles/materiaRoom.css";
 
@@ -20,7 +21,8 @@ export function MateriaRoom() {
 
   const [post, setPost] = useState();
   const [novaPergunta, setNovaPergunta] = useState("");
-  const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = useState();
+  const [modalDelShow, setModalDelShow] = useState();
 
   const materiaId = params.id;
   const baseURL = `http://localhost:8080/materia/${materiaId}/posts`;
@@ -35,7 +37,7 @@ export function MateriaRoom() {
       .catch((error) => {
         console.log(error);
       });
-  }, [modalShow]);
+  }, [modalShow, modalDelShow]);
 
   function adicionarPost(e) {
     e.preventDefault();
@@ -58,17 +60,6 @@ export function MateriaRoom() {
       });
   }
 
-  function deletarPost(id) {
-    axios
-      .delete(`http://localhost:8080/posts/${id}/delete`)
-      .then((res) => {
-        window.location.reload();
-      })
-      .catch((error) => {
-        console.log("Erro: " + error);
-      });
-  }
-
   function editarPost(post) {
     dispatch({
       type: "POST",
@@ -76,6 +67,14 @@ export function MateriaRoom() {
       postPergunta: post.pergunta,
     });
     setModalShow(true);
+  }
+
+  function deletarPost(id) {
+    dispatch({
+      type: "POST",
+      postId: id,
+    });
+    setModalDelShow(true);
   }
 
   return (
@@ -149,6 +148,12 @@ export function MateriaRoom() {
                         <FaTrash className="delete" />
                       </button>
                     </div>
+                    <ModalDeletePost
+                      show={modalDelShow}
+                      onHide={() => {
+                        setModalDelShow(false);
+                      }}
+                    />
                   </>
                 )}
               </div>
