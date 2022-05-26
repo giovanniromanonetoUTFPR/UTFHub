@@ -13,19 +13,29 @@ import br.edu.utfpr.UTFHub.service.MateriaService;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(value = "/materia")
+//@RequestMapping(value = "/materia")
 public class MateriaController {
 
+	@Autowired
 	private final MateriaService materiaService;
-	
-	@GetMapping
+
+	@GetMapping("materia/search/{materiaNome}")
+	public ResponseEntity<Page<Materia>> findMateriaByName(@PathVariable (value = "materiaNome") String nome,
+														   Pageable pageable){
+
+		Page<Materia> list = materiaService.findMateriaByNome(nome, pageable);
+
+		return ResponseEntity.ok(list);
+	}
+
+	@GetMapping("/materia")
 	public ResponseEntity<Page<Materia>> findAll(Pageable pageable){
 		Page<Materia> list = materiaService.findAll(pageable);
 		
 		return ResponseEntity.ok(list);
 	}
 	
-	@PostMapping
+	@PostMapping("/materia")
 	public ResponseEntity<String> insert(@RequestBody Materia materia){
 		Materia materiaCriada = materiaService.insert(materia);
 		if (materiaCriada == null) {
@@ -33,7 +43,7 @@ public class MateriaController {
 		}
 		return ResponseEntity.ok("Matéria cadastrado com sucesso !");
 	}
-	@PutMapping
+	@PutMapping("/materia")
 	public ResponseEntity<String> update(@RequestBody Materia materia){
 		boolean res = materiaService.update(materia);
 		if (!res) {
@@ -41,7 +51,7 @@ public class MateriaController {
 		}
 		return ResponseEntity.ok("Matéria atualizada com sucesso !");
 	}
-	@DeleteMapping
+	@DeleteMapping("/materia")
 	public ResponseEntity<String> delete(@RequestBody Materia materia){
 		boolean res = materiaService.delete(materia);
 		if (!res) {
