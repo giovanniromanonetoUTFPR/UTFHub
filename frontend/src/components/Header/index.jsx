@@ -37,6 +37,7 @@ const Header = () => {
           src={User}
           alt="Ícone de usuário"
           className="header-user-img"
+          onClick={()=> history.push('/userProfile')}
         />
 
         {/* <Link to="">Perfil</Link> */}
