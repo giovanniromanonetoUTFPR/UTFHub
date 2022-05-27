@@ -5,6 +5,8 @@
   left: 32%;
   top: -45%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .form-search {
@@ -43,4 +45,12 @@
 
 #search-content button:hover {
   filter: brightness(85%);
+}
+
+.erro{
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  margin-top: 10px;
 }
