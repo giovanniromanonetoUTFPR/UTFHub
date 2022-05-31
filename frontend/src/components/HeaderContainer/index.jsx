@@ -6,7 +6,9 @@ const HeaderContainer = () => {
   return (
     <header className="page-header-nlogo">
       <div className="header-content">
+        
         <ReactSVG src={Logo} alt="Logo UTFHub" />
+        
       </div>
     </header>
   );

@@ -20,6 +20,40 @@ const Header = () => {
     history.push("/");
   }
 
+  function paginaHome() {
+    dispatch({
+      type: "home",
+      
+    });
+    history.push("/home");
+  }
+
+  function paginaMateria() {
+    dispatch({
+      type: "materias",
+      
+    });
+    history.push("/materias");
+  }
+
+  function paginaSobre() {
+    dispatch({
+      type: "about",
+      
+    });
+    history.push("/about");
+  }
+
+  function paginaContato() {
+    dispatch({
+      type: "about",
+      
+    });
+    history.push("/about");
+  }
+
+
+
   return (
     <header className="header">
       <div className="conteudo-header">
@@ -37,6 +71,7 @@ const Header = () => {
           src={User}
           alt="Ícone de usuário"
           className="header-user-img"
+          onClick={()=> history.push('/userProfile')}
         />
 
         {/* <Link to="">Perfil</Link> */}
@@ -47,9 +82,28 @@ const Header = () => {
         >
           <NavDropdown.Item onClick={fazerLogout}>Logout</NavDropdown.Item>
         </NavDropdown>
+
+        <NavDropdown
+            id="nav-dropdown-light-example1"
+            title="Perfil"
+            menuVariant="dark"
+            >
+      <NavDropdown.Item onClick={paginaHome}>Home</NavDropdown.Item>
+      <NavDropdown.Item onClick={paginaMateria}>Matérias</NavDropdown.Item>
+      <NavDropdown.Item onClick={paginaSobre}>Sobre</NavDropdown.Item>
+      <NavDropdown.Item onClick={paginaContato}>Contato</NavDropdown.Item>
+      <NavDropdown.Item onClick={fazerLogout}>Logout</NavDropdown.Item>
+
+      </NavDropdown>
+
+        
+        
       </div>
+
+
     </header>
+               
   );
-};
+  };
 
 export default Header;
