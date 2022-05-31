@@ -21,7 +21,12 @@ public class UsuarioService {
 	@Transactional(readOnly = true)
 	public Page<UsuarioDTO> findAll(Pageable pageable) {
 		Page<Usuario> result = repository.findAll(pageable);
-		return result.map(x -> new UsuarioDTO(x.getId(), x.getNome(), x.getEmail(), x.getCampus(), x.getCurso()));
+		return result.map(x -> new UsuarioDTO(x.getId(), x.getNome(), x.getEmail(), x.getCampus(), x.getCurso(), x.getImagem()));
+	}
+
+
+	public boolean alterarImagemByUsuarioId(Usuario usuario){
+		return update(usuario);
 	}
 	
 	public UsuarioDTO insert(Usuario usuario) {
@@ -33,7 +38,7 @@ public class UsuarioService {
 		String encodedPassword = passwordEncoder.encode(usuario.getSenha());
 		usuario.setSenha(encodedPassword);
 		Usuario usuarioSalvo = repository.save(usuario);
-		return new UsuarioDTO(usuarioSalvo.getId(),usuarioSalvo.getNome(),usuarioSalvo.getEmail(),usuarioSalvo.getCampus(),usuarioSalvo.getCurso());
+		return new UsuarioDTO(usuarioSalvo.getId(),usuarioSalvo.getNome(),usuarioSalvo.getEmail(),usuarioSalvo.getCampus(),usuarioSalvo.getCurso(), usuarioSalvo.getImagem());
 		
 	}
 	
@@ -68,7 +73,7 @@ public class UsuarioService {
 		if (usuarioDB.isPresent()) {
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 			if(encoder.matches(senha,usuarioDB.get().getSenha())){
-				return new UsuarioDTO(usuarioDB.get().getId(),usuarioDB.get().getNome(),usuarioDB.get().getEmail(),usuarioDB.get().getCampus(),usuarioDB.get().getCurso());
+				return new UsuarioDTO(usuarioDB.get().getId(),usuarioDB.get().getNome(),usuarioDB.get().getEmail(),usuarioDB.get().getCampus(),usuarioDB.get().getCurso(),usuarioDB.get().getImagem());
 			}
 		}
 		return null;

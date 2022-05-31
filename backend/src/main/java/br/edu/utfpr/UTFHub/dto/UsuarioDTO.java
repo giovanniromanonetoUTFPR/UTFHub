@@ -15,4 +15,5 @@ public class UsuarioDTO {
 	private String email;
 	private String campus;
 	private String curso;
+	private String imagem;
 }
