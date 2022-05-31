@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,8 @@ public class Usuario {
 	private String curso;
 	@Column(nullable = true, length = 2048)
 	private String imagem;
+	@Column(columnDefinition = "boolean default false", nullable = false)
+	private boolean admin;
 
 	@OneToMany(
 			cascade = CascadeType.ALL

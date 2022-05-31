@@ -42,7 +42,6 @@ export function Login() {
     axios
       .post(baseURL, data)
       .then((res) => {
-        console.log(res.data);
         dispatch({
           type: "LOGIN",
           userId: res.data.id,
@@ -50,6 +49,7 @@ export function Login() {
           userEmail: res.data.email,
           userCampus: res.data.campus,
           userCurso: res.data.curso,
+          userAdmin: res.data.admin,
         });
         history.push("/home");
       })

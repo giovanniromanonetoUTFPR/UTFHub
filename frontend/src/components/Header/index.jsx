@@ -1,6 +1,6 @@
 import { NavDropdown } from "react-bootstrap";
 import { FaSistrix } from "react-icons/fa";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { ReactSVG } from "react-svg";
@@ -10,6 +10,7 @@ import "./styles.css";
 const Header = () => {
   const dispatch = useDispatch();
   const history = useHistory();
+  const isAdmin = useSelector((state) => state.userAdmin);
 
   function fazerLogout() {
     dispatch({
@@ -24,9 +25,12 @@ const Header = () => {
       <div className="conteudo-header">
         <Link to="/home">Home</Link>
         <Link to="/materias">Matérias</Link>
-        <Link to="/sobre">Sobre</Link>
-        <Link to="/contato">Contato</Link>
-        <Link to="/pesquisar">
+        <Link to="/about">Sobre</Link>
+        <Link to="/about">Contato</Link>
+        {isAdmin ? (
+          <Link to="/admin">Admin</Link>
+        ) : null}
+        <Link to="/materias">
           <FaSistrix size={33} />
         </Link>
         <ReactSVG

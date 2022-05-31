@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaGraduationCap } from "react-icons/fa";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import Header from "../components/Header";
 import HeaderContainer from "../components/HeaderContainer";
@@ -12,6 +12,7 @@ import "../styles/materias.css";
 export function Materias() {
   const history = useHistory();
   const dispatch = useDispatch();
+  const isAdmin = useSelector((state) => state.userAdmin);
 
   const baseURL = "http://localhost:8080/materia";
   const [modalShow, setModalShow] = useState(false);
@@ -56,9 +57,11 @@ export function Materias() {
           <fieldset>
             <legend>
               Matérias
-              <button onClick={() => setModalShow(true)}>
-                Adicionar matéria
-              </button>
+              {isAdmin ? (
+                <button onClick={() => setModalShow(true)}>
+                  Adicionar Matéria
+                </button>) 
+                : null}
               <ModalAddMaterias
                 show={modalShow}
                 onHide={() => {
