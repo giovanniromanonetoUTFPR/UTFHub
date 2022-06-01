@@ -10,6 +10,29 @@
     border-color: white;
 }
 
+@media screen and (max-width: 680px) {
+    .userPhoto{
+      
+        margin-top: -40%;
+        margin-left: 10%;
+      
+    }
+  }
+  
+  @media screen and (max-width: 680px) {
+    .user-img{
+      
+        margin-top: -40%;
+        margin-left: 10%;
+      
+    }
+  }
+
+
+
+
+  
+
 .userPhoto{
     display: flex;
     align-items: center;
@@ -21,3 +44,13 @@
     flex-direction: column;
     align-items: flex-start;
 }
+
+@media screen and (max-width: 680px) {
+    .userInfo{
+      align-items: center;
+      margin-top: 150%;
+      margin-left: -100%;
+      
+    }
+  }
+  
