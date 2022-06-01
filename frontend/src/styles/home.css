@@ -156,67 +156,14 @@
    #page-home {
     flex-direction: column;
   }
-}
-
-
-@media screen and (max-width: 1024px) {
   #page-home .container-posts {
     width: 175%;
  }
-}
-
-@media screen and (max-width: 680px) {
-  #page-home .container-posts {
-    width: 100%;
- }
-}
-
-@media screen and (max-width: 680px) {
-  #page-home .main-container{
-    width: 95%;
- }
-}
-
-@media screen and (max-width: 680px) {
-  #page-home .container-posts svg {
-  width: 30px;
-  margin-left: -200px;
-  margin-top: -70px;
-}
-}
-
-@media screen and (max-width: 680px) {
-  #page-home .container-posts .like-button .like {
-    margin-top: 10%;
-    margin-left: -100px;
-  }
-}
-
-@media screen and (max-width: 680px) {
-#page-home .container-posts .autor-container span {
-  color: #737380;
-  font-size: 14px;
-  margin-left: -300px;
-  margin-top: -200px;
-}
-}
-
-
-@media screen and (max-width: 1024px) {
-  #page-home #btn-materias{
+ #page-home #btn-materias{
     margin-top: 100px;
     left: 33%;
     
   }
-}
-@media screen and (max-width: 680px) {
-  #page-home #btn-materias{
-    margin-top: 120px;
-    left: 15%;
-    
-  }
-}
-@media screen and (max-width: 1024px) {
   #page-home #search-content {
     flex-direction: column;
     display: flex;
@@ -225,8 +172,45 @@
     justify-content: center;
     align-items: center;
   }
+  .btn-buscar {
+    margin-top: 35%;
+    margin-left: -104%;
+  }
 }
+
+
 @media screen and (max-width: 680px) {
+ #page-home .main-container{
+    width: 95%;
+ }
+ #page-home .container-posts svg {
+    width: 30px;
+    margin-left: -135px;
+    margin-top: 10px;
+  }
+  #page-home .container-posts .like-button .like {
+    margin-top: 10%;
+    margin-left: -100px;
+  }
+
+  #page-materiaRoom .container-posts .autor-container {
+  width: 45%;
+  }
+
+  #page-home .container-posts .autor-container span {
+    color: #737380;
+    font-size: 14px;
+    margin-left: -310px;
+    margin-top: -85px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  #page-home #btn-materias{
+    margin-top: 120px;
+    left: 15%;
+    
+  }
   #page-home #search-content {
     flex-direction: column;
     display: flex;
@@ -235,17 +219,6 @@
     margin-top: -10%;
     align-items: center;
   }
-}
-@media screen and (max-width: 1024px) {
-  .btn-buscar {
-    margin-top: 35%;
-    margin-left: -104%;
-    
-    
-  }
-}
-
-@media screen and (max-width: 680px) {
   .btn-buscar {
     margin-top: 25%;
     margin-left: -100%;
