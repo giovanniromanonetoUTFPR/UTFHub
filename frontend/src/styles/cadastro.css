@@ -3,6 +3,14 @@
   height: 100vh;
 }
 
+
+@media screen and (max-width: 680px) {
+  #page-form {
+    width: 70vh;
+  }
+}
+
+
 #page-form .voltar {
   position: absolute;
   width: 45px;
@@ -13,6 +21,14 @@
   cursor: pointer;
   transition: all 0.2s;
 }
+
+@media screen and (max-width: 680px) {
+  #page-form .voltar {
+    margin-top: -30%;
+    right: 40%;
+  }
+}
+
 
 #page-form .voltar:hover {
   color: #6e4b00;
