@@ -1,10 +1,14 @@
 package br.edu.utfpr.UTFHub.repositories;
 
+import br.edu.utfpr.UTFHub.entities.Materia;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import br.edu.utfpr.UTFHub.entities.Usuario;
+import org.springframework.http.ResponseEntity;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	@Query(
@@ -16,5 +20,4 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 			value = "SELECT * FROM usuario WHERE email = :email LIMIT 1",
 			nativeQuery = true)
 	Usuario findByEmail(@Param(value= "email") String email);
-
 }
