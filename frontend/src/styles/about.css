@@ -3,6 +3,23 @@
     height: 100vh;
     overflow: auto;
   }
+
+  @media screen and (max-width: 1024px) {
+    #about .header-content{
+      
+      left: 10%;
+      margin-top: 40%;
+   }
+  }
+
+  @media screen and (max-width: 680px) {
+    #about .header-content{
+      
+      left: 10%;
+      margin-top: 70%;
+   }
+  }
+  
   
   #btn-materias {
     position: relative;

@@ -1,8 +1,26 @@
 #page {
   display: flex;
   align-items: stretch;
-  height: 100vh;
+  height: 90vh;
+  
 }
+
+@media screen and (max-width: 1024px) {
+  #page {
+    width: 40vh;
+  }
+}
+
+@media screen and (max-width: 680) {
+  #page {
+    width: 80vh;
+  }
+}
+
+
+
+
+
 
 aside {
   flex: 7;
@@ -27,6 +45,23 @@ aside strong {
   line-height: 42px;
   margin-top: 16px;
 }
+
+@media screen and (max-width: 1024px) {
+  aside strong {
+    margin-top: -25%;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  aside {
+    display: none;
+  }
+}
+
+
+
+
 
 aside p {
   font-size: 24px;

@@ -15,9 +15,12 @@ public class UsuarioDTO {
 	private String email;
 	private String campus;
 	private String curso;
+
+	private String imagem;
+
 	private boolean admin;
 
-	public UsuarioDTO(Long id, String nome, String email, String campus, String curso) {
+	public UsuarioDTO(Long id, String nome, String email, String campus, String curso, String imagem) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;

@@ -41,8 +41,10 @@ const Search = () => {
           <FaSistrix size={33} color="black" />
         </span>
       </form>
+      <div className="btn-buscar">
       <button onClick={fazerBusca}>Buscar</button>
       <p className="erro">{erro}</p>
+      </div>
     </div>
   );
 };

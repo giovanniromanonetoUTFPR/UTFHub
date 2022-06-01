@@ -23,7 +23,7 @@ const Header = () => {
   function paginaHome() {
     dispatch({
       type: "home",
-
+      
     });
     history.push("/home");
   }
@@ -31,7 +31,7 @@ const Header = () => {
   function paginaMateria() {
     dispatch({
       type: "materias",
-
+      
     });
     history.push("/materias");
   }
@@ -39,7 +39,7 @@ const Header = () => {
   function paginaSobre() {
     dispatch({
       type: "about",
-
+      
     });
     history.push("/about");
   }
@@ -47,7 +47,7 @@ const Header = () => {
   function paginaContato() {
     dispatch({
       type: "about",
-
+      
     });
     history.push("/about");
   }
@@ -88,26 +88,26 @@ const Header = () => {
         </NavDropdown>
 
         <NavDropdown
-          id="nav-dropdown-light-example1"
-          title="Perfil"
-          menuVariant="dark"
-        >
-          <NavDropdown.Item onClick={paginaHome}>Home</NavDropdown.Item>
-          <NavDropdown.Item onClick={paginaMateria}>Matérias</NavDropdown.Item>
-          <NavDropdown.Item onClick={paginaSobre}>Sobre</NavDropdown.Item>
-          <NavDropdown.Item onClick={paginaContato}>Contato</NavDropdown.Item>
-          <NavDropdown.Item onClick={fazerLogout}>Logout</NavDropdown.Item>
+            id="nav-dropdown-light-example1"
+            title="Perfil"
+            menuVariant="dark"
+            >
+      <NavDropdown.Item onClick={paginaHome}>Home</NavDropdown.Item>
+      <NavDropdown.Item onClick={paginaMateria}>Matérias</NavDropdown.Item>
+      <NavDropdown.Item onClick={paginaSobre}>Sobre</NavDropdown.Item>
+      <NavDropdown.Item onClick={paginaContato}>Contato</NavDropdown.Item>
+      <NavDropdown.Item onClick={fazerLogout}>Logout</NavDropdown.Item>
 
-        </NavDropdown>
+      </NavDropdown>
 
-
-
+        
+        
       </div>
 
 
     </header>
-
+               
   );
-};
+  };
 
 export default Header;

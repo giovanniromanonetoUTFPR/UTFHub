@@ -32,6 +32,8 @@ public class Usuario {
 	private String campus;
 	@Column(nullable = false, length = 64)
 	private String curso;
+	@Column(nullable = true, length = 2048)
+	private String imagem;
 	@Column(columnDefinition = "boolean default false", nullable = false)
 	private boolean admin;
 

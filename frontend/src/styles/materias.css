@@ -8,6 +8,82 @@
   top: -67%;
 }
 
+
+@media screen and (max-width: 1024px) {
+  #page-materias .form-search {
+    margin-top: 30%;
+   margin-left: -140%;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+  #page-materias .icone-search {
+   margin-left: -134%;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+  #page-materias .btn-buscar {
+    
+    margin-left: -140%;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+  #page-materias .conteudo-header{
+    
+    margin-top: 2%;
+ }
+}
+@media screen and (max-width: 1024px) {
+  #page-materias .header-content{
+    
+    left: 5%;
+    margin-top: 25%;
+ }
+}
+
+
+@media screen and (max-width: 680px) {
+  #page-materias .form-search {
+    margin-top: 50%;
+   margin-left: -225%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-materias .icone-search {
+   margin-left: -215%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-materias .btn-buscar {
+    margin-top: 40%;
+    margin-left: -127%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-materias .conteudo-header{
+    
+    margin-top: 2%;
+ }
+}
+@media screen and (max-width: 680px) {
+  #page-materias .header-content{
+    
+    left: 15%;
+    margin-top: 70%;
+ }
+}
+
+
+
+
+
+
+
 #page-materias .main-container {
   width: 80%;
   min-height: 100%; /* Tentar tirar o height ou min-height */

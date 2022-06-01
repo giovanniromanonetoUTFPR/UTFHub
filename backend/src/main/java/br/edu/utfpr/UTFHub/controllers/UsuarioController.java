@@ -5,13 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import br.edu.utfpr.UTFHub.dto.UsuarioDTO;
 import br.edu.utfpr.UTFHub.entities.Login;
@@ -20,12 +14,12 @@ import br.edu.utfpr.UTFHub.service.UsuarioService;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(value = "/usuario")
+//@RequestMapping(value = "/usuario")
 public class UsuarioController {
 
 	private final UsuarioService usuarioService;
 
-	@GetMapping
+	@GetMapping("/usuario")
 	public ResponseEntity<Page<UsuarioDTO>> findAll(Pageable pageable) {
 		Page<UsuarioDTO> list = usuarioService.findAll(pageable);
 		return ResponseEntity.ok(list);
@@ -38,7 +32,19 @@ public class UsuarioController {
 		}
 		return ResponseEntity.ok(usuarioLogado);
 	}
-	@PostMapping
+
+	@PutMapping("/usuario/imagem")
+	public ResponseEntity<String> getImagemByUsuarioId(@RequestBody Usuario usuario){
+		usuarioService.alterarImagemByUsuarioId(usuario);
+
+		if (usuarioService.alterarImagemByUsuarioId(usuario)) {
+			return ResponseEntity.ok("Imagem alterada com sucesso !");
+		}
+		return ResponseEntity.badRequest().body("Erro ao alterar imagem !");
+
+	}
+
+	@PostMapping("/usuario")
 	public ResponseEntity<String> insert(@RequestBody Usuario usuario){
 		UsuarioDTO usuarioCriado = usuarioService.insert(usuario);
 		if (usuarioCriado == null) {
@@ -46,7 +52,7 @@ public class UsuarioController {
 		}
 		return ResponseEntity.ok("Usuário cadastrado com sucesso !");
 	}
-	@PutMapping
+	@PutMapping("/usuario")
 	public ResponseEntity<String> update(@RequestBody Usuario usuario){
 		boolean res = usuarioService.update(usuario);
 		if (!res) {
@@ -54,7 +60,7 @@ public class UsuarioController {
 		}
 		return ResponseEntity.ok("Usuário atualizado com sucesso !");
 	}
-	@DeleteMapping
+	@DeleteMapping("/usuario")
 	public ResponseEntity<String> delete(@RequestBody Usuario usuario){
 		boolean res = usuarioService.delete(usuario);
 		if (!res) {
@@ -62,4 +68,6 @@ public class UsuarioController {
 		}
 		return ResponseEntity.ok("Usuário deletado com sucesso !");
 	}
+
+
 }
