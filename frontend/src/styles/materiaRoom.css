@@ -119,19 +119,35 @@
 
 #page-materiaRoom .container-posts svg {
   width: 30px;
+  margin-left: -120px;
 }
+
 
 #page-materiaRoom .container-posts span {
   color: #737380;
   font-size: 16px;
-  margin-left: 10px;
+  margin-left: -10px;
+}
+
+#page-materiaRoom .container-posts .autor-container span {
+  color: #737380;
+  font-size: 16px;
+  margin-left: -285px;
+  margin-top: -105px;
 }
 
 #page-materiaRoom .container-posts .like-button {
   display: flex;
   justify-content: flex-end;
-  margin-top: -30px;
-  margin-right: 70px;
+  margin-top: -175px;
+  margin-right: 115px;
+}
+
+#page-materiaRoom .container-posts .like-button .like {
+  color: #737380;
+  width: 22px;
+  height: 22px;
+  margin-right: -65px;
 }
 
 #page-materiaRoom .container-posts .edit-button {
