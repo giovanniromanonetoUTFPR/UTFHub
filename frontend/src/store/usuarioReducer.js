@@ -14,6 +14,7 @@ function usuarioReducer(state = INITIAL_STATE, action) {
         userCampus: action.userCampus,
         userCurso: action.userCurso,
         userAdmin: action.userAdmin,
+        userImg: action.userImg,
       };
     case "LOGOUT":
       return {

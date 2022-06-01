@@ -30,7 +30,7 @@ public class UsuarioController {
 		Page<UsuarioDTO> list = usuarioService.findAll(pageable);
 		return ResponseEntity.ok(list);
 	}
-	@PostMapping(value="/login")
+	@PostMapping(value="/usuario/login")
 	public ResponseEntity<UsuarioDTO> login(@RequestBody Login login){
 		UsuarioDTO usuarioLogado = usuarioService.login(login.getEmail(),login.getSenha());
 		if(usuarioLogado == null) {

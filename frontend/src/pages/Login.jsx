@@ -50,6 +50,7 @@ export function Login() {
           userCampus: res.data.campus,
           userCurso: res.data.curso,
           userAdmin: res.data.admin,
+          userImg: res.data.imagem,
         });
         history.push("/home");
       })
