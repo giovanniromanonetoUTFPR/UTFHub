@@ -6,7 +6,15 @@
 
 @media screen and (max-width: 680px) {
   #page-form {
-    width: 70vh;
+    width: 47vh;
+  }
+}
+
+
+@media screen and (max-width: 680px) {
+  #page-form .textoCad p {
+    margin-left: -50%;
+    margin-top: 20%;
   }
 }
 
