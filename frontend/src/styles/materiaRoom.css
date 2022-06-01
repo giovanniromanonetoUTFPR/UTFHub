@@ -191,3 +191,113 @@
   width: 21px;
   height: 21px;
 }
+
+@media screen and (max-width: 1024px) {
+  #page-materiaRoom .main-container textarea#pergunta {
+     width: 220%; 
+     margin-left: -65%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-materiaRoom .main-container textarea#pergunta {
+     width: 130%; 
+     margin-left: -20%;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+  #page-materiaRoom .form-footer button {
+    
+    margin-left: -20%;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+  #page-materiaRoom .container-posts {
+    width: 105%;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+  #page-materiaRoom .header-content{
+    
+    left: 5%;
+    margin-top: 25%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-materiaRoom .header-content{
+    
+    left: 15%;
+    margin-top: 75%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-materiaRoom .container-posts svg {
+  width: 30px;
+  margin-left: -135px;
+  margin-top: 10px;
+}
+}
+
+@media screen and (max-width: 680px) {
+  #page-materiaRoom .container-posts .like-button .like {
+    margin-top: 10%;
+    /* margin-left: -35px;
+    margin-bottom: -15px; */
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #page-materiaRoom .container-posts .like-button span {
+    margin-right: -45px;
+    margin-top: 7px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #page-materiaRoom .container-posts .autor-container  {
+    width: 45%;
+    
+    }
+  }
+
+
+@media screen and (max-width: 680px) {
+#page-materiaRoom .container-posts .autor-container span {
+  color: #737380;
+  font-size: 14px;
+  margin-left: -190px;
+  margin-top: -85px;
+  text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 680px) {
+#page-materiaRoom .container-posts .edit {
+  color: #737380;
+  width: 21px;
+  height: 21px;
+  margin-top: 1px;
+  margin-right: -120px;
+
+  }
+}
+
+@media screen and (max-width: 680px) {
+#page-materiaRoom .container-posts .delete {
+  color: #737380;
+  width: 21px;
+  height: 21px;
+  margin-right: -110px;
+  margin-top: 1px;
+  
+  }
+}
+
+

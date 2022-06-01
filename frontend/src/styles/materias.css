@@ -35,6 +35,7 @@
     margin-top: 2%;
  }
 }
+
 @media screen and (max-width: 1024px) {
   #page-materias .header-content{
     
@@ -42,6 +43,13 @@
     margin-top: 25%;
  }
 }
+
+@media screen and (max-width: 1024px) {
+  #page-materias .container-list-materias {
+    width: 180px;
+ }
+}
+
 
 
 @media screen and (max-width: 680px) {
@@ -77,9 +85,6 @@
     margin-top: 70%;
  }
 }
-
-
-
 
 
 
@@ -150,7 +155,7 @@
 }
 
 #page-materias .container-list-materias button {
-  width: 734px;
+  width: 650px;
   height: 71px; 
   margin-left: 0px;
   background: #FEFEFE;
