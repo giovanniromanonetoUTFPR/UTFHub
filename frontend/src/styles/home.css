@@ -158,6 +158,50 @@
   }
 }
 
+
+@media screen and (max-width: 1024px) {
+  #page-home .container-posts {
+    width: 175%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-home .container-posts {
+    width: 100%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-home .main-container{
+    width: 95%;
+ }
+}
+
+@media screen and (max-width: 680px) {
+  #page-home .container-posts svg {
+  width: 30px;
+  margin-left: -200px;
+  margin-top: -70px;
+}
+}
+
+@media screen and (max-width: 680px) {
+  #page-home .container-posts .like-button .like {
+    margin-top: 10%;
+    margin-left: -100px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+#page-home .container-posts .autor-container span {
+  color: #737380;
+  font-size: 14px;
+  margin-left: -300px;
+  margin-top: -200px;
+}
+}
+
+
 @media screen and (max-width: 1024px) {
   #page-home #btn-materias{
     margin-top: 100px;
