@@ -163,7 +163,6 @@ export function MateriaRoom() {
                     <FiThumbsUp className="like" />
                   </button>
                   <span>{post.likes}</span>
-                  <span>5</span>
                 </div>
                 {post.autorId === usuarioId && (
                   <>
