@@ -31,4 +31,22 @@
       
     }
   }
+
+  @media screen and (max-width: 680px) {
+    #about .main-container{
+      height: 180%;
+      
+    }
+  }
+
+  
+  @media screen and (max-width: 680px) {
+    #about .main-container form{
+      width: 250%;
+      margin-left: -75%;
+      
+    }
+  }
+
+  
   
