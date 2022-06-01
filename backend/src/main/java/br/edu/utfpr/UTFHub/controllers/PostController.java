@@ -66,5 +66,13 @@ public class PostController {
 		return ResponseEntity.ok("Pergunta deletada com sucesso !");
 	}
 
+	@PutMapping("/posts/{id}/like")
+	public ResponseEntity<String> likePost(@PathVariable (value = "id") Long id, @RequestBody Post post){
+		boolean res = postService.likePost(post, id);
+		if (!res) {
+			return ResponseEntity.badRequest().body("Não foi possível curtir o post");
+		}
+		return ResponseEntity.ok("Você curtiu o post!");
+	}
 
 }

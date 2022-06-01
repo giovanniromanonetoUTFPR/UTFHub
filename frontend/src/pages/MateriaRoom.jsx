@@ -69,6 +69,29 @@ export function MateriaRoom() {
     setModalShow(true);
   }
 
+  function likePost(post) {
+    const dadosPostLike = {
+      autor: post.autor,
+      pergunta: post.pergunta,
+      materiaId: post.materiaId,
+      autorId: post.autorId,
+      likes: post.likes + 1,
+    };
+
+    axios
+      .put(`http://localhost:8080/posts/${post.id}/like`, dadosPostLike)
+      .then((res) => {
+        // dispatch({
+        //   type: "LIKE",
+        //   postLiked: true,
+        // });
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.log("Erro: " + error);
+      });
+  }
+
   function deletarPost(id) {
     dispatch({
       type: "POST",
@@ -125,9 +148,21 @@ export function MateriaRoom() {
                 </div>
 
                 <div className="like-button">
-                  <button aria-label="Marcar como gostei">
+                  <button
+                    aria-label="Marcar como gostei"
+                    onClick={() => likePost(post)}
+                  >
+                    {/* {postLiked ? (
+                      <FiThumbsUp
+                        className="like"
+                        style={{ color: "#FF941A" }}
+                      />
+                    ) : (
+                      <FiThumbsUp className="like" />
+                    )} */}
                     <FiThumbsUp className="like" />
                   </button>
+                  <span>{post.likes}</span>
                   <span>5</span>
                 </div>
                 {post.autorId === usuarioId && (

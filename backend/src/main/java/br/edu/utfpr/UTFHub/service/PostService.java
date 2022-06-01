@@ -50,4 +50,14 @@ public class PostService {
 		}
 		return false;
 	}
+
+	public boolean likePost(Post post, Long id) {
+		Optional<Post> postDB = repository.findById(id);
+		if (postDB.isPresent()) {
+			post.setId(id);
+			repository.save(post);
+			return true;
+		}
+		return false;
+	}
 }
