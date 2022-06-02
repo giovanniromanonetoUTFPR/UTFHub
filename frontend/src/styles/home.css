@@ -193,14 +193,15 @@
     margin-left: -100px;
   }
 
-  #page-materiaRoom .container-posts .autor-container {
-  width: 45%;
+  #page-home .container-posts .autor-container {
+    width: 65%;
+    
   }
 
   #page-home .container-posts .autor-container span {
     color: #737380;
     font-size: 14px;
-    margin-left: -310px;
+    margin-left: -220px;
     margin-top: -85px;
     text-overflow: ellipsis;
     overflow: hidden;
