@@ -5,8 +5,10 @@ Um hub de conexões que tem como objetivo conectar alunos para discussões sobre
 https://utfhub.netlify.app/
 
 # Membros da equipe
+- Giovanni Romano Neto
+- Luiza Schons Amorim
+- Otavio Ogo
 - Raul Val dos Reis
-- Carlos Eduardo Nogueira de Freitas Veiga
 
 # Tecnologias
 - Frontend
